@@ -6,12 +6,13 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaGitAlt,
-  FaDatabase,
   FaComments,
   FaUsers,
   FaLightbulb,
   FaClock,
 } from "react-icons/fa";
+import { LuBicepsFlexed } from "react-icons/lu";
+import { MdSelfImprovement } from "react-icons/md";
 import {
   SiTypescript,
   SiTailwindcss,
@@ -23,6 +24,9 @@ import {
   SiNextdotjs,
   SiFirebase,
   SiShadcnui,
+  SiMongoose,
+  SiJsonwebtokens,
+  SiMui,
 } from "react-icons/si";
 
 export default function Skills() {
@@ -35,14 +39,17 @@ export default function Skills() {
     { name: "Node.js", icon: <FaNode className="text-green-600" /> },
     { name: "Express.js", icon: <FaNode className="text-gray-800" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+    { name: "Mongoose", icon: <SiMongoose className="text-red-500" /> },
     { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-700" /> },
     { name: "Prisma ORM", icon: <SiPrisma className="text-indigo-600" /> },
     { name: "HTML5", icon: <FaHtml5 className="text-orange-600" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" /> },
     { name: "ShadcnUI", icon: <SiShadcnui className="text-gray-900" /> },
+    { name: "MaterialUI", icon: <SiMui className="text-blue-500" /> },
     { name: "Bootstrap", icon: <SiBootstrap className="text-purple-700" /> },
     { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+    { name: "JWT", icon: <SiJsonwebtokens className="text-pink-500" /> },
     { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
   ];
 
@@ -54,6 +61,14 @@ export default function Skills() {
       icon: <FaLightbulb className="text-yellow-400" />,
     },
     { name: "Time Management", icon: <FaClock className="text-indigo-500" /> },
+    {
+      name: "Self-Discipline",
+      icon: <MdSelfImprovement className="text-red-500" />,
+    },
+    {
+      name: "Adaptability",
+      icon: <LuBicepsFlexed className="text-amber-900" />,
+    },
   ];
 
   return (
