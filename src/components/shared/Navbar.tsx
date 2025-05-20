@@ -104,10 +104,10 @@ export default function Navbar() {
          }
        `}</style>
           <div
-            className={`absolute top-14 right-0 max-w-full rounded-lg border border-transparent animate-border-gradient bg-[url('/assets/blur_bg.png')] backdrop-blur shadow-2xl z-50 transition-all duration-300 ${
+            className={`absolute top-14 right-0 max-w-full rounded-lg border border-transparent animate-border-gradient bg-[url('/assets/blur_bg.png')] backdrop-blur shadow-2xl z-50 transition-all duration-500 ${
               mobileView
                 ? "translate-y-0 opacity-100"
-                : "translate-y-full opacity-0"
+                : "-translate-y-full opacity-0 invisible"
             }`}
           >
             <nav className="p-4">
@@ -118,7 +118,7 @@ export default function Navbar() {
                     <li key={link.id}>
                       <Link
                         href={link.path}
-                        className={`flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-[var(--primaryColor2)] hover:text-white hover:bg-slate-700/50
+                        className={`flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-[var(--primaryColor3)] hover:text-white hover:bg-slate-700/50
                     `}
                         // onClick={() => {
                         //   setActivePath(link.path);

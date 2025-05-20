@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Sansita, Oleo_Script } from "next/font/google";
+import { Toaster } from "sonner";
+import Providers from "@/providers/Providers";
 
 const sansita = Sansita({
   variable: "--font-sansita", // Link this to a CSS variable
@@ -29,7 +31,8 @@ export default function RootLayout({
       <body
         className={`${sansita.variable} ${oleo_script.variable} antialiased`}
       >
-        {children}
+        <Toaster richColors position="top-center" />
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

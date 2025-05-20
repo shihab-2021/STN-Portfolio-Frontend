@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col-reverse sm:flex-row items-center justify-between relative font-sansita mt-5">
       <p className="font-sansita text-[var(--primaryColor1)] py-2">
-        <span className="font-oleo_script">Shihab</span> © 2024 | All Rights
+        <span className="font-oleo_script">Shihab</span> © 2025 | All Rights
         Reserved
       </p>
       <div className="pl-1 py-4 flex gap-4">
