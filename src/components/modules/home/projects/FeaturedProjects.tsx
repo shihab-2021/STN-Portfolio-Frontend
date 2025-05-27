@@ -59,7 +59,7 @@ export default function FeaturedProjects() {
                           width={300}
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <Link
                           href={`/projectDetails/${project?._id}`}
@@ -78,7 +78,7 @@ export default function FeaturedProjects() {
                         index % 2 === 0 ? "md:pl-4" : "md:pr-4"
                       }`}
                     >
-                      <div className="bg-white rounded-b-lg md:rounded-lg shadow-lg border border-[var(--primaryColor4)] p-4 md:p-6 h-full">
+                      <div className="bg-[var(--primaryColor4)]/20 rounded-b-lg md:rounded-lg shadow-lg border border-[var(--primaryColor3)]/20 p-4 md:p-6 h-full">
                         <div className="mb-2">
                           <span className="inline-block px-2 md:px-3 py-1 text-xs md:text-sm font-semibold bg-blue-100 text-blue-800 rounded-full">
                             {project.category}

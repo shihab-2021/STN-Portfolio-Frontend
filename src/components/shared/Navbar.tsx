@@ -118,7 +118,7 @@ export default function Navbar() {
                     <li key={link.id}>
                       <Link
                         href={link.path}
-                        className={`flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-[var(--primaryColor3)] hover:text-white hover:bg-slate-700/50
+                        className={`flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-[var(--primaryColor1)] hover:text-white hover:bg-slate-700/50
                     `}
                         // onClick={() => {
                         //   setActivePath(link.path);

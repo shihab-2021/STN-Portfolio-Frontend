@@ -19,5 +19,6 @@ export default {
   // In v4, dark mode is enabled by default and uses the 'media' strategy
   // To use class strategy with next-themes, we specify it here:
   darkMode: "class",
-  plugins: [],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require("@tailwindcss/typography")],
 } satisfies Config;
