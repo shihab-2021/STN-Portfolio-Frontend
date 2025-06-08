@@ -182,7 +182,7 @@ const markdownComponents: Partial<Components> = {
       <div
         className={`group relative my-6 rounded-lg overflow-hidden 
                       border border-gray-200 ${
-                        !language && "inline bg-gray-50"
+                        !language && "inline bg-emerald-50"
                       }`}
       >
         {language && (
