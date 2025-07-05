@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import { Components } from "react-markdown";
-import { FiCopy, FiCheck, FiExternalLink, FiHash } from "react-icons/fi";
+import { FiExternalLink, FiHash } from "react-icons/fi";
 import Image from "next/image";
+import MarkdownCopyButton from "./MarkdownCopyButton";
 
 interface CodeBlockProps {
   inline?: boolean;
@@ -10,31 +10,34 @@ interface CodeBlockProps {
 }
 
 // Copy button component
-const CopyButton: React.FC<{ text: string }> = ({ text }) => {
-  const [copied, setCopied] = useState(false);
+// const CopyButton: React.FC<{ text: string }> = ({ text }) => {
+//   const [copied, setCopied] = useState(false);
 
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error("Failed to copy:", err);
-    }
-  };
+//   const handleCopy = async () => {
+//     try {
+//       await navigator.clipboard.writeText(text);
+//       setCopied(true);
+//       setTimeout(() => setCopied(false), 2000);
+//     } catch (err) {
+//       console.error("Failed to copy:", err);
+//     }
+//   };
 
-  return (
-    <button
-      onClick={handleCopy}
-      className="absolute top-3 right-3 p-2 rounded-md bg-white hover:bg-white/90 
-                 text-gray-400 hover:text-gray-600 transition-all duration-200 cursor-pointer 
-                 opacity-0 group-hover:opacity-100 backdrop-blur-sm"
-      title={copied ? "Copied!" : "Copy code"}
-    >
-      {copied ? <FiCheck size={16} /> : <FiCopy size={16} />}
-    </button>
-  );
-};
+//   return (
+//     <button
+//       onClick={handleCopy}
+//       className="absolute top-3 right-3 p-2 rounded-md bg-white hover:bg-white/90
+//                  text-gray-400 hover:text-gray-600 transition-all duration-200 cursor-pointer
+//                  opacity-0 group-hover:opacity-100 backdrop-blur-sm"
+//       title={copied ? "Copied!" : "Copy code"}
+//     >
+//       {copied ? <FiCheck size={16} /> : <FiCopy size={16} />}
+//     </button>
+//   );
+// };
+const CopyButton: React.FC<{ text: string }> = ({ text }) => (
+  <MarkdownCopyButton text={text} />
+);
 
 // Header anchor component
 const HeaderAnchor: React.FC<{ id?: string }> = ({ id }) => {
